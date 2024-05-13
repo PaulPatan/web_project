@@ -1,0 +1,22 @@
+<h1>Control Panel</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>User</th>
+    <th>Posts</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td>
+        <% user.posts.each do |post| %>
+          <p><%= post.title %></p>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
